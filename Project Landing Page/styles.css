@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.landing-div {
+  background-color: #1f2937;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links > a {
+  color: #e5e7eb;
+  size: 18px;
+  text-decoration: none;
+}
+
+.header-logo {
+  size: 24px;
+  color: #f9faf8;
+}
+
+.welcome-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f9faf8;
+  border: none;
+  margin: 2.5rem;
+  text-align: left;
+}
+
+.welcome-title {
+  margin: 10px;
+}
+
+.welcome-subtext {
+  margin: 15px 10px;
+}
+
+.signup-button {
+  margin: 0px 10px;
+  background-color: #3882f6;
+  color: #f9faf8;
+  font-size: 20px;
+  border-style: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.image {
+  margin: 20px;
+  background-color: red;
+  width: 35%;
+}
