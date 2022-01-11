@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0; 
+    background-color: #a8dadc;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+button {
+    padding: 25px 50px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #f1faee;
+    border-width: 3px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #1d3557;
+    color: #f1faee;
+}
+
+/*************************** LANDING PAGE CSS **************************/
+.landing-page-container{
+    color: #1d3557;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 500px;
+}
+
+/*************************** GAME SCREEN CSS ****************************/
+
+.game-screen-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    margin-top: 330px;
+    gap: 100px;
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+.image-container > img {
+    width: 25%;
+}
+
+.image-container > img:hover {
+    cursor: pointer;
+}
+
+/*************************** RESULT CONTAINER CSS ****************************/
+.result-screen {
+    margin-top: 330px;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+.result-screen > h1 {
+    margin-top: 1.5rem;
+    font-size: 84px;
+    font-weight: bolder;
+}
+
+.player-result-header {
+    margin-bottom: 1rem;
+}
+
+.retry-button {
+    margin-top: 3.5rem;
+}
+
+/*************************** FOOTER CSS ****************************/
+
+.footer {
+    /* position: absolute; */
+    padding: 50px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+
+

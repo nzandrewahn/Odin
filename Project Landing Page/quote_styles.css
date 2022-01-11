@@ -1,0 +1,31 @@
+
+.quote-section {
+    padding: 5rem 2rem;
+    background-color: #e5e7eb;
+    display: flex;
+    justify-content: center;
+}
+
+.quote-section cite {
+    font-weight: bolder;
+    font-style: normal;
+}
+
+.quote-text {
+    font-size: 36px;
+    font-weight: lighter;
+    font-style: italic;
+
+}
+
+.quote-container {
+    width: 75%;
+}
+
+.author-container {
+    font-size: 18px;
+    display: flex;
+    justify-content: right;
+}
+
+

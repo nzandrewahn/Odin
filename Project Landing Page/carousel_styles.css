@@ -1,7 +1,29 @@
-.carousel {
-  margin: 2rem;
+.carousel-section {
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: lightskyblue;
+}
+
+.carousel-info {
+  color: #1f2937;
+  font-weight: bolder;
+  font-size: 36px;
+}
+
+.image-carousel{
+  margin: 1rem 0px;
+  display: flex;
+}
+
+.carousel-item {
+  margin: 1rem;
 }
 
 .yoda-image {
-  width: 20%;
+  width: 150px;
 }
+
+

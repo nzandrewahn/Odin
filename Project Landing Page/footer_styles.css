@@ -1,0 +1,29 @@
+.signup-button-second {
+  background-color: #3882f6;
+  color: #f9faf8;
+  border-color: #f9faf8;
+  font-size: 20px;
+  border-style:solid;
+  padding: 8px 40px;
+  margin-left: 3rem;
+  border-radius: 10px;
+}
+
+.footer-container {
+  background-color: blue;
+  color: #f9faf8;
+  margin: 4rem 5rem;
+  padding: 2.5rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-text {
+  width: 60%;
+}
+
+.footer-text p {
+  font-size: small;
+}
+

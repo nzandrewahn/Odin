@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="landing-page-container">
+        <h1>Rock Paper Scissors Game</h1>
+        <button id="start-button" onclick=startButtonClick() >Start Game</button>
+    </div>
+
+    <div class="game-screen-container">
+        <h1>MAKE YOUR CHOICE</h1>
+        <div class="image-container">
+            <img id = 0 onclick= playGame(event) src="./assets/stone.png" alt="Rock">
+            <img id = 1 onclick= playGame(event) src="./assets/new-document.png" alt="Paper">
+            <img id = 2 onclick= playGame(event) src="./assets/scissors.png" alt="Scissors">
+        </div>
+    </div>
+
+    <div class="result-screen">
+        <h2>Player Picked: </h2>
+        <h2 class="player-result-header"></h2>
+        <h2>CPU Picked: </h2>
+        <h2 class="CPU-result"></h2>
+        <h1 class="result-display-header"></h1>
+        <button class="retry-button" onclick="RestartClickHandler()">Restart</button>
+    </div>
+    
+    <div class="footer">
+        <p>
+            Made by: Andrew Ahn 
+        </p>
+        <p>
+            The Odin Project
+        </p>
+    </div>
+
+</body>
+</html>
