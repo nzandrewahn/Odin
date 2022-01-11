@@ -87,6 +87,13 @@ button:hover {
     margin-top: 3.5rem;
 }
 
+
+.finish-screen {
+    margin-top: 500px;
+    display: none;
+    justify-content: center;
+}
+
 /*************************** FOOTER CSS ****************************/
 
 .footer {

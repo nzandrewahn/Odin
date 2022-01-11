@@ -25,6 +25,11 @@
             <img id = 1 onclick= playGame(event) src="./assets/new-document.png" alt="Paper">
             <img id = 2 onclick= playGame(event) src="./assets/scissors.png" alt="Scissors">
         </div>
+        <div>
+            <h2 class="player-win-count"></h2>
+            <h2 class="cpu-win-count"></h2>
+
+        </div>
     </div>
 
     <div class="result-screen">
@@ -34,6 +39,10 @@
         <h2 class="CPU-result"></h2>
         <h1 class="result-display-header"></h1>
         <button class="retry-button" onclick="RestartClickHandler()">Restart</button>
+    </div>
+
+    <div class="finish-screen">
+        <h1 class="winner-screen-header"></h1>
     </div>
     
     <div class="footer">

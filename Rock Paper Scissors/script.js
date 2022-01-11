@@ -7,8 +7,13 @@ let resultScreenDiv = document.getElementsByClassName("result-screen")[0];
 let resultDisplayHeader = document.getElementsByClassName("result-display-header")[0];
 let cpuResultHeader = document.getElementsByClassName("CPU-result")[0];
 let playerResultHeader = document.getElementsByClassName("player-result-header")[0];
+let finishScreenDiv = document.getElementsByClassName("finish-screen")[0];
+let finishScreenHeader = document.getElementsByClassName("winner-screen-header")[0];
+let playerWinCount = document.getElementsByClassName("player-win-count")[0];
+let cpuWinCount = document.getElementsByClassName("cpu-win-count")[0];
 
-
+let win_count = 0;
+let loss_count = 0;
 
 function startButtonClick() {
   //Hid landing page and show game screen
@@ -20,6 +25,18 @@ function playGame(event) {
 
   // Hide game screen page 
   gameScreenDiv.style.display = "none";
+ 
+  console.log(win_count);
+  console.log(loss_count)
+  if (win_count >= 4) {
+    finishScreenDiv.style.display = "flex";
+    finishScreenHeader.innerHTML = "PLAYER WINS"
+    return;
+  } else if (loss_count >= 4) {
+    finishScreenDiv.style.display = "flex";
+    finishScreenHeader.innerHTML = "CPU WINS"
+    return;
+  }
 
   ////// Calculate Winner
   // Get players roll 
@@ -51,8 +68,10 @@ function playGame(event) {
   } else if ((player_roll == cpu_roll + 1) || (player_roll == 0 && cpu_roll == 2)) {
     console.log("player win");
     result = "Player Win";
+    win_count++;
   } else {
     console.log("cpu win");
+    loss_count++;
     result = "CPU Win";
   }
   
@@ -60,6 +79,9 @@ function playGame(event) {
   resultScreenDiv.style.display = "inline-flex";
   playerResultHeader.innerHTML = parseNumber(player_roll)
   cpuResultHeader.innerHTML = parseNumber(cpu_roll)
+  cpuWinCount.innerHTML = `CPU Win Count: ${loss_count}`
+  playerWinCount.innerHTML = `Player Win Count: ${win_count}`
+
   resultDisplayHeader.innerHTML = result; 
 }
 
