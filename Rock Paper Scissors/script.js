@@ -12,7 +12,7 @@ let finishScreenHeader = document.getElementsByClassName("winner-screen-header")
 let playerWinCount = document.getElementsByClassName("player-win-count")[0];
 let cpuWinCount = document.getElementsByClassName("cpu-win-count")[0];
 
-let win_count = 0;
+let win_count = 5;
 let loss_count = 0;
 
 function startButtonClick() {
@@ -29,11 +29,11 @@ function playGame(event) {
   console.log(win_count);
   console.log(loss_count)
   if (win_count >= 4) {
-    finishScreenDiv.style.display = "flex";
+    finishScreenDiv.style.display = "inline-flex";
     finishScreenHeader.innerHTML = "PLAYER WINS"
     return;
   } else if (loss_count >= 4) {
-    finishScreenDiv.style.display = "flex";
+    finishScreenDiv.style.display = "inline-flex";
     finishScreenHeader.innerHTML = "CPU WINS"
     return;
   }
