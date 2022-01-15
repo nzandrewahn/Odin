@@ -6,24 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="./styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Rajdhani&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Rajdhani&display=swap"
+      rel="stylesheet"
+    />
     <script src="script.js" defer></script>
   </head>
   <body>
     <div class="game-container">
       <h1>Etch-a-Sketch</h1>
       <div class="slider-container">
-        <input
-          class="size-slider"
-          type="range"
-          min="4"
-          max="4096"
-          value="4"
-        />
+        <input class="size-slider" type="range" min="2" max="64" value="1" />
+        <input class="colour-picker" type="color" value="#000000"/>
       </div>
-      <div ondragstart = "return false" ondrop = "return false" class="canvas"></div>
+      <div
+        ondragstart="return false"
+        ondrop="return false"
+        class="canvas"
+      ></div>
     </div>
   </body>
 </html>

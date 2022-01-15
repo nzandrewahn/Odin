@@ -1,19 +1,20 @@
 const canvas = document.getElementsByClassName("canvas")[0];
 const sizeSlider = document.getElementsByClassName("size-slider")[0];
+const colourPicker = document.getElementsByClassName("colour-picker")[0];
 
 let pixel = document.createElement("div");
 let mouseClicked = false;
-let size = 4;
+let width = sizeSlider.value;
+let colour = "#000000";
 
-let RenderCanvas = (size) => {
-  let width = Math.round(Math.sqrt(size));
+let RenderCanvas = (width) => {
 
   while (canvas.firstChild) {
     canvas.removeChild(canvas.firstChild);
   }
   canvas.style.gridTemplateColumns = `repeat(${width}, 1fr)`;
 
-  for (let i = 0; i < size; i++) {
+  for (let i = 0; i < Math.pow(width,2); i++) {
     pixel = document.createElement("div");
     pixel.classList.add("canvas__pixel");
     pixel.id = `pixel-${i}`;
@@ -21,25 +22,35 @@ let RenderCanvas = (size) => {
 
     pixel.addEventListener("mousedown", (e) => {
       mouseClicked = true;
-      console.log(`mouse is clicked : ${mouseClicked}`);
+      colourPixel(pixel, e);
+      // console.log(`mouse is clicked : ${mouseClicked}`);
     });
 
     pixel.addEventListener("mouseup", (e) => {
       mouseClicked = false;
-      console.log(`mouse is clicked : ${mouseClicked}`);
+      // console.log(`mouse is clicked : ${mouseClicked}`);
     });
 
     pixel.addEventListener("pointerover", (e) => {
-      if (mouseClicked) {
-        let currentPixel = document.getElementById(e.target.id);
-        currentPixel.style.backgroundColor = "red";
-      }
+      colourPixel(pixel, e);
     });
     canvas.appendChild(pixel);
   }
 };
 
-RenderCanvas(size);
+RenderCanvas(width);
+
+function colourPixel (pixel, e){
+  if (mouseClicked) {
+    let currentPixel = document.getElementById(e.target.id);
+    currentPixel.style.backgroundColor = colour;
+  }
+}
+
+colourPicker.addEventListener("input", (e) => {
+  colour = `${e.target.value}`;
+  console.log(e.target.value)
+})
 
 
 canvas.addEventListener("mouseleave", (e) => {
