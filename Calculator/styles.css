@@ -1,0 +1,21 @@
+
+.keypad-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 5rem;
+}
+
+.display {
+    width: 9rem;
+    height: 2rem;
+    border: black 1px solid;
+}
+
+.keypad-key {
+    width: 2rem;
+    height: 2rem;
+    border: black 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
