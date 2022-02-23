@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+
+    <form action="http://httpbin.org/post" method="post">
+      <div class="name">
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" placeholder="John Doe" />
+      </div>
+
+      <div class="email">
+        <label for="email">Email: </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="johndoe@email.com"
+        />
+      </div>
+
+      <div class="password">
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password" />
+      </div>
+
+      <div class="age">
+        <label for="age">Age: </label>
+        <input type="number" name="number" id="number" />
+      </div>
+
+      <div class="birthday">
+        <label for="birthday">Birthday: </label>
+        <input type="date" name="birthday" id="birthday" />
+      </div>
+
+      <div class="textarea">
+        <label for="textarea">Other Comments: </label>
+        <textarea
+          style="display: block"
+          name="textarea"
+          id="textarea"
+          cols="60"
+          rows="10"
+          class="textarea"
+        ></textarea>
+      </div>
+
+      <select name="car" id="car">
+        <option value="merc">Mercedes</option>
+        <option value="tes">Tesla</option>
+        <option value="toy" selected>Toyota</option>
+        <option value="bmw">BMW</option>
+        <option value="ford">Ford</option>
+      </select>
+
+      <select name="drinks" id="drinks" style="display: block">
+        <optgroup label="Hot Drinks">
+          <option value="hot_choc">Hot Chocolate</option>
+          <option value="coffee">Coffee</option>
+        </optgroup>
+        <optgroup label="Cold Drinks">
+          <option value="tea">Iced Tea</option>
+          <option value="ice_coffee">Iced Coffee</option>
+          <option value="water">Cold Water</option>
+        </optgroup>
+      </select>
+
+      <!-- When 5 or fewer better to have a radio button list  -->
+
+      <div>
+        <input type="radio" name="fav_drink" id="milk_tea" value="milk_tea" />
+        <label for="milk_tea">Milk Tea</label>
+      </div>
+
+      <div>
+        <input type="radio" name="fav_drink" id="coffee" value="coffee" />
+        <label for="cofee">Cofee</label>
+      </div>
+
+      <div>
+        <input type="radio" name="fav_drink" id="water" value="water" checked />
+        <label for="water">Water</label>
+      </div>
+
+      <!-- Checkbox allows for multiple selections -->
+      <h2>Toppings</h2>
+
+      <div>
+        <input type="checkbox" name="topping" id="sausage" value="sausage" />
+        <label for="sausage">Sausage</label>
+      </div>
+
+      <div>
+        <input
+          type="checkbox"
+          name="topping"
+          id="pepperoni"
+          value="pepperoni"
+        />
+        <label for="pepperoni">Pepperoni</label>
+      </div>
+
+      <div>
+        <input
+          type="checkbox"
+          name="topping"
+          id="mushrooms"
+          value="mushrooms"
+        />
+        <label for="mushrooms">Mushrooms</label>
+      </div>
+
+      <div>
+        <input type="checkbox" name="topping" id="onions" value="onions" />
+        <label for="onions">Onions</label>
+      </div>
+
+      <h2>Subscribe?</h2>
+      <div>
+        <label for="sub_check">Send Newsletter?</label>
+        <input
+          type="checkbox"
+          name="subscribe"
+          id="sub_check"
+          value="sub_check"
+          checked
+        />
+      </div>
+      <button type="reset">Clear</button>
+      <button type="submit">Submit</button>
+      <button type="button">Generic Button</button>
+    </form>
+
+    <!-- Allows us to group related fields into one logical unit -->
+    <fieldset>
+      <!-- Labels the group of related fields, should always come after a fieldset tag-->
+      <legend>Contact Details</legend>
+
+      <label for="first_name">First Name</label>
+      <input type="text" id="first_name" name="first_name" />
+
+      <label for="last_name">Last Name</label>
+      <input type="text" id="last_name" name="last_name" />
+    </fieldset>
+
+    <!-- Common use case for fieldsets and legends -->
+    <fieldset>
+      <legend>What would you like to drink?</legend>
+
+      <div>
+        <input type="radio" name="drink" id="coffee" value="coffee" />
+        <label for="coffee">Coffee</label>
+      </div>
+
+      <div>
+        <input type="radio" name="drink" id="tea" value="tea" />
+        <label for="tea">Tea</label>
+      </div>
+
+      <div>
+        <input type="radio" name="drink" id="soda" value="soda" />
+        <label for="soda">Soda</label>
+      </div>
+    </fieldset>
+
+    <h1>SVGS</h1>
+
+    <div class="container">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+        <rect x="0" y="0" width="100" height="100" fill="burlywood" />
+        <path
+          d="M 10 10 H 90 V 90 L 10 60"
+          fill="transparent"
+          stroke="black"
+          stroke-width="3"
+        />
+        <circle cx="50" cy="50" r="20" class="svg-circle" />
+        <g class="svg-text-group">
+          <text x="20" y="25" rotate="10" id="hello-text">Hello!</text>
+          <use href="#hello-text" x="-10" y="65" fill="white"/>
+        </g>
+      </svg>
+    </div>
+  </body>
+</html>
