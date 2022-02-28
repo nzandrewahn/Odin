@@ -1,0 +1,14 @@
+.image-sidebar {
+  background-color: green;
+}
+
+.image-sidebar__header {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  background-color: red;
+}
+
+.image-sidebar__header > img {
+  height: 50px;
+}
